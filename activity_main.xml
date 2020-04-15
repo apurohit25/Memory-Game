@@ -1,33 +1,239 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:stretchColumns="1">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:theme="@style/AppTheme.AppBarOverlay">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+    <TableRow>
+
+        <TextView
+            android:layout_span="4"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Memory Game"
+            android:textColor="#1F618D"
+            android:background="#F4D03F"
+            android:textSize="45dp"
+            android:textStyle="bold"
+            app:fontFamily="serif-monospace" />
+    </TableRow>
+
+
+    <TableRow>
+
+        <ImageButton
+            android:id="@+id/one"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:onClick="onClicked" />
+
+        <ImageButton
+            android:id="@+id/two"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:onClick="onClicked" />
+
+        <ImageButton
+            android:id="@+id/three"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:onClick="onClicked" />
+
+        <ImageButton
+            android:id="@+id/four"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:onClick="onClicked" />
+
+
+    </TableRow>
+
+    <TableRow>
+
+        <ImageButton
+            android:id="@+id/five"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:onClick="onClicked" />
+
+        <ImageButton
+            android:id="@+id/six"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:onClick="onClicked" />
+
+        <ImageButton
+            android:id="@+id/seven"
+
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:onClick="onClicked" />
+
+        <ImageButton
+            android:id="@+id/eight"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:onClick="onClicked" />
+    </TableRow>
+
+    <TableRow>
+
+        <ImageButton
+            android:id="@+id/nine"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:onClick="onClicked" />
+
+        <ImageButton
+            android:id="@+id/ten"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:onClick="onClicked" />
+
+        <ImageButton
+            android:id="@+id/eleven"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:onClick="onClicked" />
+
+        <ImageButton
+            android:id="@+id/twelve"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:onClick="onClicked" />
+    </TableRow>
+
+    <TableRow>
+
+        <ImageButton
+            android:id="@+id/thirteen"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:onClick="onClicked" />
+
+        <ImageButton
+            android:id="@+id/fourteen"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:onClick="onClicked" />
+
+        <ImageButton
+            android:id="@+id/fifteen"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:onClick="onClicked" />
+
+        <ImageButton
+            android:id="@+id/sixteen"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:layout_weight="1"
+            android:baselineAligned="false"
+            android:onClick="onClicked" />
+
+    </TableRow>
+
+    <LinearLayout>
+
+        <Button
+            android:id="@+id/button_start_pause"
             android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
+            android:layout_height="wrap_content"
+            android:layout_span="1"
+            android:layout_weight="1"
+            android:onClick="onClicked"
+            android:text="START"
+            android:background="#FF5733"
+            android:textColor="#581845"
+            android:fontFamily="serif"
+            android:textStyle="bold"
+            android:textSize="34sp" />
 
-    </com.google.android.material.appbar.AppBarLayout>
+        <TextView
+            android:id="@+id/score"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="#F1C40F"
+            android:textColor="#2471A3"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"
+            android:text="SCORE:"
+            android:textSize="34sp"
+            android:layout_height="50sp"
+            android:layout_width="300sp" />
+    </LinearLayout>
 
-    <include layout="@layout/content_main" />
+    <TableRow>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fab"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email" />
+        <Button
+            android:id="@+id/button_reset"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:onClick="onClicked"
+            android:background="#FF5733"
+            android:textColor="#581845"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:text="RESET"
+            android:textSize="34dp"
+            android:visibility="invisible" />
+        <TextView
+            android:id="@+id/text_view_countdown"
+            android:layout_width="150sp"
+            android:layout_height="150sp"
+            android:layout_weight="1"
+            android:background="#FF5733"
+            android:textColor="#581845"
+            android:textStyle="bold"
+            android:fontFamily="serif"
+            android:gravity="center"
+            android:text="00:00"
+            android:textSize="40dp" />
 
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+        <TextView
+            android:id="@+id/outText"
+            android:layout_weight="1"
+            android:background="#F1C40F"
+            android:textColor="#2471A3"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"
+            android:text="0/8"
+            android:textSize="40dp"
+            android:gravity="center"
+            android:layout_width="150sp"
+            android:layout_height="150sp" />
+
+
+    </TableRow>>
+
+
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true" />
+
+
+
+</TableLayout>
+
